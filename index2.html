@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Random</title>
+
+   <style>
+      body{
+         background-color: silver;
+         color: darkviolet;
+         text-align: center;
+         font-size: 50px;
+      }
+      button{
+         background-color: black;
+         color: red;
+         font-size: 50px;
+      }
+
+   </style>
+</head>
+
+<body>
+
+   <div id="demo"></div>  
+<button onclick="Shiv()">shiv</button>
+<button onclick="Parth()">parth</button>
+
+<script>
+   var shiv = 0;
+   var parth = 0;
+
+   function Shiv() {
+
+      var dip = Math.floor(Math.random() * 10);
+   
+      document.getElementById('demo').innerHTML = dip;
+      shiv=dip
+      parth = 0;
+      console.log(shiv);
+   }  
+
+   function Parth() {
+
+      if(parth != 0){
+         alert('parth is not');
+         return ;
+      }
+
+      var hardik = Math.floor(Math.random() * 10);
+   
+      document.getElementById('demo').innerHTML = hardik;
+      parth=hardik
+      console.log(parth);
+   
+      if (shiv > parth) {
+         alert("shiv is win & parth is lose");
+      }
+      else {
+         alert("parth is win & shiv is lose");
+      }
+   } 
+
+</script>
+</body>  
+</html>
